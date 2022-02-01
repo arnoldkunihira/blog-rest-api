@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { PostModule } from "./post/post.module";
+import { TweetModule } from "./tweet/tweet.module";
 import { ConfigModule } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
 
@@ -16,7 +16,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
             entities: [__dirname + "/**/*.entity{.ts,.js}"],
             synchronize: process.env.DB_SYNCHRONIZE === "true"
         }),
-        PostModule
+        TweetModule
     ],
     controllers: [],
     providers: []
